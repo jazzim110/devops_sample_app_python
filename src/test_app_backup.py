@@ -22,6 +22,6 @@ def test_hello(client):
 
 
 def test_hello_name(client):
-  rtv = client.get('/hello/jh')
+  rtv = client.get('/hello/dj')
   assert rtv.status_code == 200
-  assert rtv.json == {"message": "Hello jh\n"}
+  assert rtv.json == {"message": "Hello dj\n"}
