@@ -50,7 +50,7 @@ pipeline {
     }
     stage('============ Deploy workload ============') {
         when { expression { return params.DEPLOY_WORKLOAD } }
-	step {
+	steps {
 	    echo "Deploy workload"
 	}
     }
