@@ -8,7 +8,6 @@ def create_app():
   app = Flask(__name__)
 
   @app.route("/healthz")
-  @metrics.exclude_all_metrics()
   def healthz():
     return {
       "status": 200,
