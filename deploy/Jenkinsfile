@@ -11,7 +11,7 @@ pipeline {
     // CI
     string(name : 'AWS_ACCOUNT_ID', defaultValue : '775449302751', description : 'AWS_ACCOUNT_ID')
     string(name : 'DOCKER_IMAGE_NAME', defaultValue : 'demo-jaehoon', description : 'DOCKER_IMAGE_NAME')
-    string(name : 'DOCKER_TAG', defaultValue : '1.0.1', description : 'DOCKER_TAG')
+    string(name : 'DOCKER_TAG', defaultValue : '2.0.0', description : 'DOCKER_TAG')
 
     // CD
     string(name : 'TARGET_SVR_USER', defaultValue : 'ec2-user', description : 'TARGET_SVR_USER')
