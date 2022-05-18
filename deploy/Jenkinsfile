@@ -43,7 +43,7 @@ pipeline {
     }
     stage('============ Run test code ============') {
         when { expression { return params.RUN_TEST } }
-	agent { label 'slave'}
+	agent { label 'slave' }
         steps {
             sh'''
                 aws ecr get-login-password --region ${REGION} | docker login --username AWS --password-stdin ${ECR_REPOSITORY}
@@ -53,7 +53,7 @@ pipeline {
     }
     stage('============ Push Docker Image ============') {
         when { expression { return params.PUSH_DOCKER_IMAGE } }
-	agent { label 'slave'}
+	agent { label 'slave' }
         steps {
             echo "Push Docker Image to ECR"
             sh'''
