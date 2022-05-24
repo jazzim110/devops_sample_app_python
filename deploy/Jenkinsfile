@@ -60,7 +60,7 @@ pipeline {
         steps {
 //            input 'Deploy this?'
             script {
-                env.APPROVAL_NUM = input.message: 'Please enter the approval number',
+                env.APPROVAL_NUM = input message: 'Please enter the approval number',
                                   parameters: [string(defaultValue: '',
                                                description: '',
                                                name: 'APPROVAL_NUM')]
