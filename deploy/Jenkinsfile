@@ -56,6 +56,11 @@ pipeline {
             '''
         }
     }
+    stage('Prompt for deploy') {
+        steps {
+            input 'Deploy this?'
+        }
+    }
     stage('============ Deploy Workload ============') {
         when { expression { return params.DEPLOY_WORKLOAD } }
         steps {
