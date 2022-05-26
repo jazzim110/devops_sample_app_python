@@ -2,9 +2,9 @@ version: 0.2
 env:
   variables:
     AWS_DEFAULT_REGION: "ap-northeast-2"
-    ECR_URL: "657976307134.dkr.ecr.ap-northeast-2.amazonaws.com"
-    ECR_DOCKER_IMAGE: "demo"
-    ECR_DOCKER_TAG: "1.0.0"
+    ECR_URL: "802844773267.dkr.ecr.ap-northeast-2.amazonaws.com"
+    ECR_DOCKER_IMAGE: "demo-jh"
+    ECR_DOCKER_TAG: "2.0.0"
 
 phases:
   pre_build:
@@ -22,10 +22,10 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push ${ECR_URL}/${ECR_DOCKER_IMAGE}:${ECR_DOCKER_TAG}
-artifacts:
-  files:
-    - deploy/appspec.yml
-    - deploy/scripts/kill_process.sh
-    - deploy/scripts/run_process.sh
-    - deploy/docker-compose.yml
-  discard-paths: yes
+#artifacts:
+#  files:
+#    - deploy/appspec.yml
+#    - deploy/scripts/kill_process.sh
+#    - deploy/scripts/run_process.sh
+#    - deploy/docker-compose.yml
+#  discard-paths: yes
