@@ -22,10 +22,10 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push ${ECR_URL}/${ECR_DOCKER_IMAGE}:${ECR_DOCKER_TAG}
-#artifacts:
-#  files:
-#    - deploy/appspec.yml
-#    - deploy/scripts/kill_process.sh
-#    - deploy/scripts/run_process.sh
-#    - deploy/docker-compose.yml
-#  discard-paths: yes
+artifacts:
+  files:
+    - deploy/appspec.yml
+    - deploy/scripts/kill_process.sh
+    - deploy/scripts/run_process.sh
+    - deploy/docker-compose.yml
+  discard-paths: yes
