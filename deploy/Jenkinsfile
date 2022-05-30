@@ -17,7 +17,7 @@ pipeline {
     // CD
     string(name : 'TARGET_SVR_USER', defaultValue : 'ec2-user', description : 'TARGET_SVR_USER')
     string(name : 'TARGET_SVR_PATH', defaultValue : '/home/ec2-user/', description : 'TARGET_SVR_PATH')
-    string(name : 'TARGET_SVR', defaultValue : '10.0.3.238', description : 'TARGET_SVR')
+    string(name : 'TARGET_SVR', defaultValue : '10.0.3.61', description : 'TARGET_SVR')
   }
 
   environment {
@@ -26,7 +26,7 @@ pipeline {
     ECR_DOCKER_IMAGE = "${ECR_REPOSITORY}/${params.DOCKER_IMAGE_NAME}"
     ECR_DOCKER_TAG = "${params.DOCKER_TAG}"
 
-    CODEBUILD_NAME = "jenkins-slave-codebuild"
+    CODEBUILD_NAME = "jenkins-slave-codebuild-jh"
     CODEBUILD_ARTIFACT_S3_NAME = "jenkins-slave-artifact-codebuild-s3-jh"
     CODEBUILD_ARTIFACT_S3_KEY = "${currentBuild.number}/jenkins-slave-codebuild"
     CODEDEPLOY_NAME = "demo-jh-codedeploy-app-jh"
